@@ -6,11 +6,8 @@ cache: npm
 branches:
   only:
     - master # build master branch only
-install:
-  - npm install
 script:
-  - npx hexo clean   #清除
-  - npx hexo g   #生成
+  - hexo generate # generate static files
 deploy:
   provider: pages
   skip-cleanup: true
